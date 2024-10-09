@@ -33,6 +33,9 @@
                                 <state key="normal" title="Aceptar">
                                     <color key="titleShadowColor" systemColor="systemPinkColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="aceptarPulsado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EXH-Vv-R1j"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -47,6 +50,9 @@
                             <constraint firstItem="HS3-mM-3LK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p2d-tw-6rA"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nombreTextField" destination="kvk-oX-7cz" id="4WB-xa-ohN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
