@@ -10,25 +10,55 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var nombreTextField: UITextField!
+    @IBOutlet weak var aceptarButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        inicio()
     }
 
     @IBAction func aceptarPulsado(_ sender: UIButton) {
+        if nombreValido() {
+            crearAmigo(nombre: nombreTextField.text!)
+        }
+    }
+    
+    
+    @IBAction func textoCambiado(_ sender: Any) {
+        nombreValido()
+    }
+    
+    func nombreValido() -> Bool {
         let nombre = nombreTextField.text!
         let valido = Amigo.validarNombre(nombre: nombre)
-        if !valido {
-            nombreTextField.text = "Nombre inválido"
-            nombreTextField.textColor = #colorLiteral(red: 0.8078431487, green: 0.02745098062, blue: 0.3333333433, alpha: 1)
+        if nombre.isEmpty {
+            inicio()
+        } else if !valido {
+            error()
         } else {
-            let amigo = Amigo(nombre: nombre)
-            // Cambiar texto del botón
-            sender.setTitle("Amigo " + amigo.nombre + " añadido", for: .normal)
-            sender.isEnabled = false // Desabilitar
-            nombreTextField.text = "" // Borrar campo de texto
+            escribiendo()
         }
+        return valido
+    }
+    
+    func inicio() {
+        aceptarButton.setTitle("Aceptar", for: .normal)
+        aceptarButton.isEnabled = false
+    }
+    
+    func escribiendo() {
+        aceptarButton.setTitle("Aceptar", for: .normal)
+        aceptarButton.isEnabled = true
+    }
+    
+    func error() {
+        aceptarButton.setTitle("Nombre inválido", for: .normal)
+        aceptarButton.isEnabled = false
+    }
+    
+    func crearAmigo(nombre: String) {
+        let amigo = Amigo(nombre: nombre)
+        performSegue(withIdentifier: "irAPantallaAmigo", sender: nil)
     }
     
 }

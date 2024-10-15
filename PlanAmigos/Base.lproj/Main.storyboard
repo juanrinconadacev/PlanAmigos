@@ -17,15 +17,18 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Añadir amigo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HS3-mM-3LK">
-                                <rect key="frame" x="127" y="74" width="160" height="34"/>
+                                <rect key="frame" x="127" y="230" width="160" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <color key="textColor" systemColor="systemRedColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kvk-oX-7cz">
-                                <rect key="frame" x="50" y="178" width="314" height="34"/>
+                                <rect key="frame" x="50" y="334" width="314" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="textoCambiado:" destination="BYZ-38-t0r" eventType="editingChanged" id="RV6-kL-21g"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="teM-0s-L5H">
                                 <rect key="frame" x="168" y="748" width="78" height="40"/>
@@ -37,29 +40,57 @@
                                     <action selector="aceptarPulsado:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EXH-Vv-R1j"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amigos" translatesAutoresizingMaskIntoConstraints="NO" id="c3z-3E-nyN">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="AlC-gN-mHu"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.71301812534798392" green="1" blue="0.80186931306630771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="c3z-3E-nyN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="2aU-gd-iJK"/>
                             <constraint firstItem="teM-0s-L5H" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="MA4-XL-A86"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="teM-0s-L5H" secondAttribute="bottom" constant="74" id="OsL-RQ-Reh"/>
+                            <constraint firstItem="c3z-3E-nyN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RhV-yB-uuF"/>
                             <constraint firstItem="kvk-oX-7cz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="UK9-8g-fEa"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kvk-oX-7cz" secondAttribute="trailing" constant="50" id="cRd-eO-7uL"/>
-                            <constraint firstItem="HS3-mM-3LK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="ea6-pC-Qrn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c3z-3E-nyN" secondAttribute="trailing" id="czL-Gc-nZU"/>
+                            <constraint firstItem="HS3-mM-3LK" firstAttribute="top" secondItem="c3z-3E-nyN" secondAttribute="bottom" constant="30" id="ea6-pC-Qrn"/>
                             <constraint firstItem="kvk-oX-7cz" firstAttribute="top" secondItem="HS3-mM-3LK" secondAttribute="bottom" constant="70" id="gTY-n2-nhn"/>
                             <constraint firstItem="HS3-mM-3LK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="p2d-tw-6rA"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="aceptarButton" destination="teM-0s-L5H" id="5iO-RN-6SL"/>
                         <outlet property="nombreTextField" destination="kvk-oX-7cz" id="4WB-xa-ohN"/>
+                        <segue destination="oRe-8u-ryY" kind="show" identifier="irAPantallaAmigo" id="Nla-Tl-fum"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-197.10144927536234" y="93.75"/>
+            <point key="canvasLocation" x="-1055" y="119"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IgX-Lr-TNJ">
+            <objects>
+                <viewController id="oRe-8u-ryY" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LQo-tn-ukY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="MsD-EE-AUi"/>
+                        <color key="backgroundColor" systemColor="systemRedColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="xnY-Xh-5ss"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0PT-8K-icr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="70" y="119"/>
         </scene>
     </scenes>
     <resources>
+        <image name="amigos" width="259" height="194"/>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
