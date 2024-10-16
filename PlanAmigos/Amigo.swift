@@ -2,6 +2,8 @@
 
 import Foundation
 
+var amigos: [Amigo] = []
+
 class Amigo {
     var nombre: String = "Invitado"
     var email: String?

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class CrearAmigoViewController: UIViewController {
 
     @IBOutlet weak var nombreTextField: UITextField!
     @IBOutlet weak var aceptarButton: UIButton!
@@ -43,6 +43,7 @@ class ViewController: UIViewController {
     
     func inicio() {
         aceptarButton.setTitle("Aceptar", for: .normal)
+        nombreTextField.text = ""
         aceptarButton.isEnabled = false
     }
     
@@ -58,7 +59,9 @@ class ViewController: UIViewController {
     
     func crearAmigo(nombre: String) {
         let amigo = Amigo(nombre: nombre)
+        amigos.append(amigo)
         performSegue(withIdentifier: "irAPantallaAmigo", sender: nil)
+        inicio()
     }
     
 }

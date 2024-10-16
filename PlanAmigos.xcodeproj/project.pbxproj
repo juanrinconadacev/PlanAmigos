@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		55263F3B2CBFAD820026040E /* Amigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55263F3A2CBFAD820026040E /* Amigo.swift */; };
+		55263F3F2CBFC1460026040E /* AmigosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55263F3E2CBFC1460026040E /* AmigosViewController.swift */; };
 		55459B382CB68A73000D53FB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55459B372CB68A73000D53FB /* AppDelegate.swift */; };
 		55459B3A2CB68A73000D53FB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55459B392CB68A73000D53FB /* SceneDelegate.swift */; };
-		55459B3C2CB68A73000D53FB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55459B3B2CB68A73000D53FB /* ViewController.swift */; };
+		55459B3C2CB68A73000D53FB /* CrearAmigoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55459B3B2CB68A73000D53FB /* CrearAmigoViewController.swift */; };
 		55459B3F2CB68A73000D53FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55459B3D2CB68A73000D53FB /* Main.storyboard */; };
 		55459B412CB68A74000D53FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55459B402CB68A74000D53FB /* Assets.xcassets */; };
 		55459B442CB68A74000D53FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55459B422CB68A74000D53FB /* LaunchScreen.storyboard */; };
@@ -18,10 +19,11 @@
 
 /* Begin PBXFileReference section */
 		55263F3A2CBFAD820026040E /* Amigo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amigo.swift; sourceTree = "<group>"; };
+		55263F3E2CBFC1460026040E /* AmigosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigosViewController.swift; sourceTree = "<group>"; };
 		55459B342CB68A73000D53FB /* PlanAmigos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlanAmigos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55459B372CB68A73000D53FB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55459B392CB68A73000D53FB /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55459B3B2CB68A73000D53FB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55459B3B2CB68A73000D53FB /* CrearAmigoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CrearAmigoViewController.swift; sourceTree = "<group>"; };
 		55459B3E2CB68A73000D53FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55459B402CB68A74000D53FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55459B432CB68A74000D53FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -60,12 +62,13 @@
 			children = (
 				55459B372CB68A73000D53FB /* AppDelegate.swift */,
 				55459B392CB68A73000D53FB /* SceneDelegate.swift */,
-				55459B3B2CB68A73000D53FB /* ViewController.swift */,
+				55459B3B2CB68A73000D53FB /* CrearAmigoViewController.swift */,
 				55459B3D2CB68A73000D53FB /* Main.storyboard */,
 				55459B402CB68A74000D53FB /* Assets.xcassets */,
 				55459B422CB68A74000D53FB /* LaunchScreen.storyboard */,
 				55459B452CB68A74000D53FB /* Info.plist */,
 				55263F3A2CBFAD820026040E /* Amigo.swift */,
+				55263F3E2CBFC1460026040E /* AmigosViewController.swift */,
 			);
 			path = PlanAmigos;
 			sourceTree = "<group>";
@@ -140,8 +143,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55459B3C2CB68A73000D53FB /* ViewController.swift in Sources */,
+				55459B3C2CB68A73000D53FB /* CrearAmigoViewController.swift in Sources */,
 				55459B382CB68A73000D53FB /* AppDelegate.swift in Sources */,
+				55263F3F2CBFC1460026040E /* AmigosViewController.swift in Sources */,
 				55459B3A2CB68A73000D53FB /* SceneDelegate.swift in Sources */,
 				55263F3B2CBFAD820026040E /* Amigo.swift in Sources */,
 			);

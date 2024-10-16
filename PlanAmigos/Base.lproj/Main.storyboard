@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Crear Amigo View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PlanAmigos" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="CrearAmigoViewController" customModule="PlanAmigos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,17 +72,43 @@
             </objects>
             <point key="canvasLocation" x="-1055" y="119"/>
         </scene>
-        <!--View Controller-->
+        <!--Amigos View Controller-->
         <scene sceneID="IgX-Lr-TNJ">
             <objects>
-                <viewController id="oRe-8u-ryY" sceneMemberID="viewController">
+                <viewController id="oRe-8u-ryY" customClass="AmigosViewController" customModule="PlanAmigos" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LQo-tn-ukY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="dSa-5u-66Y">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celdaAmigo" id="5Lc-bg-qqV">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5Lc-bg-qqV" id="eml-6k-ewI">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <color key="backgroundColor" red="1" green="0.70048242901262547" blue="0.50132365560526049" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="MsD-EE-AUi"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
+                        <constraints>
+                            <constraint firstItem="MsD-EE-AUi" firstAttribute="trailing" secondItem="dSa-5u-66Y" secondAttribute="trailing" id="LI0-EU-QBj"/>
+                            <constraint firstItem="dSa-5u-66Y" firstAttribute="leading" secondItem="MsD-EE-AUi" secondAttribute="leading" id="l3B-qJ-uAu"/>
+                            <constraint firstItem="dSa-5u-66Y" firstAttribute="top" secondItem="MsD-EE-AUi" secondAttribute="top" id="nbA-Lh-E5C"/>
+                            <constraint firstItem="MsD-EE-AUi" firstAttribute="bottom" secondItem="dSa-5u-66Y" secondAttribute="bottom" id="yu9-JU-cJW"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="xnY-Xh-5ss"/>
+                    <connections>
+                        <outlet property="amigosTableView" destination="dSa-5u-66Y" id="t0U-uY-duK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0PT-8K-icr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,6 +117,9 @@
     </scenes>
     <resources>
         <image name="amigos" width="259" height="194"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
